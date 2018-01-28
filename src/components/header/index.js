@@ -11,12 +11,12 @@ import 'preact-material-components/Toolbar/style.css';
 // import style from './style';
 
 export default class Header extends Component {
-	closeDrawer() {
-		this.drawer.MDComponent.open = false;
-		this.state = {
-			darkThemeEnabled: false
-		};
-	}
+  closeDrawer() {
+    this.drawer.MDComponent.open = false;
+    this.state = {
+      darkThemeEnabled: false
+    };
+  }
 
 	openDrawer = () => (this.drawer.MDComponent.open = true);
 
@@ -26,54 +26,54 @@ export default class Header extends Component {
 	dialogRef = dialog => (this.dialog = dialog);
 
 	linkTo = path => () => {
-		route(path);
-		this.closeDrawer();
+	  route(path);
+	  this.closeDrawer();
 	};
 
 	goHome = this.linkTo('/');
 	goToMyProfile = this.linkTo('/profile');
 
 	toggleDarkTheme = () => {
-		this.setState(
-			{
-				darkThemeEnabled: !this.state.darkThemeEnabled
-			},
-			() => {
-				if (this.state.darkThemeEnabled) {
-					document.body.classList.add('mdc-theme--dark');
-				}
-				else {
-					document.body.classList.remove('mdc-theme--dark');
-				}
-			}
-		);
+	  this.setState(
+	    {
+	      darkThemeEnabled: !this.state.darkThemeEnabled
+	    },
+	    () => {
+	      if (this.state.darkThemeEnabled) {
+	        document.body.classList.add('mdc-theme--dark');
+	      }
+	      else {
+	        document.body.classList.remove('mdc-theme--dark');
+	      }
+	    }
+	  );
 	}
 
 	render() {
-		return (
-			<div>
-				<Toolbar className="toolbar">
-					<Toolbar.Row>
-						<Toolbar.Section align-start>
-							<Toolbar.Title>Welcome to vc2gb!</Toolbar.Title>
-						</Toolbar.Section>
-						<Toolbar.Section align-end onClick={this.openSettings}>
-							<Toolbar.Icon>settings</Toolbar.Icon>
-						</Toolbar.Section>
-					</Toolbar.Row>
-				</Toolbar>
-				<Dialog ref={this.dialogRef}>
-					<Dialog.Header>Settings</Dialog.Header>
-					<Dialog.Body>
-						<div>
+	  return (
+	    <div>
+	      <Toolbar className="toolbar">
+	        <Toolbar.Row>
+	          <Toolbar.Section align-start>
+	            <Toolbar.Title>Welcome to vc2gb!</Toolbar.Title>
+	          </Toolbar.Section>
+	          <Toolbar.Section align-end onClick={this.openSettings}>
+	            <Toolbar.Icon>settings</Toolbar.Icon>
+	          </Toolbar.Section>
+	        </Toolbar.Row>
+	      </Toolbar>
+	      <Dialog ref={this.dialogRef}>
+	        <Dialog.Header>Settings</Dialog.Header>
+	        <Dialog.Body>
+	          <div>
 							Enable dark theme <Switch onClick={this.toggleDarkTheme} />
-						</div>
-					</Dialog.Body>
-					<Dialog.Footer>
-						<Dialog.FooterButton accept>okay</Dialog.FooterButton>
-					</Dialog.Footer>
-				</Dialog>
-			</div>
-		);
+	          </div>
+	        </Dialog.Body>
+	        <Dialog.Footer>
+	          <Dialog.FooterButton accept>okay</Dialog.FooterButton>
+	        </Dialog.Footer>
+	      </Dialog>
+	    </div>
+	  );
 	}
 }
