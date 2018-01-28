@@ -17,7 +17,8 @@
       "lines-around-comment": "off",
       "react/prefer-stateless-function": "off",
       "react/jsx-no-bind": "off",
-      "no-case-declarations": "off"
+      "no-case-declarations": "off",
+      "indent": ["error", 2]
     }
   },
   "eslintIgnore": [
