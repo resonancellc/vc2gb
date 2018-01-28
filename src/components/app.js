@@ -21,7 +21,7 @@ export default class App extends Component {
 	      <Header />
 	      <Router onChange={this.handleRoute}>
 	        <Route path="/" component={Home} />
-	        <Route path="/build/" component={Home} />
+	        <Route path="/vc2gb/" component={Home} />
 	      </Router>
 	    </div>
 	  );
