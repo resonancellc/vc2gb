@@ -92,7 +92,7 @@ export default class Home extends Component {
 		return (
 			<div class={style.home}>
 				<Dropzone onDrop={this.state.convertFunc.bind(this)} className={style.dropzone}>
-					<img src={`../../assets/${this.state.convertIcon}`} class={style.uploadIcon} />
+					<img src={`assets/${this.state.convertIcon}`} class={style.uploadIcon} />
 					<h3 class={style.centerText}>Drop your {this.state.convertFrom} save here</h3>
 				</Dropzone>
 				<div class={style.switchSpace}>
