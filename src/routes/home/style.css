@@ -1,0 +1,34 @@
+.home {
+	padding: 20px;
+	min-height: 100%;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.uploadIcon {
+	width: 50%;
+	height: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.dropzone {
+	height: 30%;
+	padding: 5%;
+	border-style: solid;
+	border-color: grey;
+}
+
+.switchSpace {
+	margin-top: 10%;
+}
+
+.switchLabel {
+	font-weight: bold;
+	margin-left: 15px;
+}
+
+.centerText {
+	text-align: center;
+}
