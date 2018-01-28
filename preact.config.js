@@ -1,3 +1,3 @@
 export default function (config, env, helpers) {
-  config.output.publicPath = '/build/';
+  config.output.publicPath = '/vc2gb/';
 }
